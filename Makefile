@@ -50,11 +50,11 @@ all: v4l2loopback.ko utils
 v4l2loopback: v4l2loopback.ko
 v4l2loopback.ko:
 	@echo "Building v4l2-loopback driver..."
-	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) KCPPFLAGS="$(KCPPFLAGS)" modules
+	$(MAKE) CFLAGS_MODULE=-fno-pic -C $(KERNEL_DIR) M=$(PWD) KCPPFLAGS="$(KCPPFLAGS)" modules
 
 install-all: install install-extra
 install:
-	$(MAKE) -C $(KERNEL_DIR) M=$(PWD) modules_install
+	$(MAKE) CFLAGS_MODULE=-fno-pic -C $(KERNEL_DIR) M=$(PWD) modules_install
 	@echo ""
 	@echo "SUCCESS (if you got 'SSL errors' above, you can safely ignore them)"
 	@echo ""
