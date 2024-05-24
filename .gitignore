@@ -12,3 +12,4 @@ v4l2loopback.mod.c
 v4l2loopback.mod.o
 v4l2loopback.o
 .clang-format
+akiyo_qcif.yuv
