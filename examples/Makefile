@@ -1,4 +1,4 @@
-TARGETS=test yuv4mpeg_to_v4l2 ondemandcam yuv420_infiniteloop
+TARGETS=test yuv4mpeg_to_v4l2 ondemandcam yuv420_infiniteloop yuv420_infiniteloop_exp
 
 .PHONY: all clean
 
